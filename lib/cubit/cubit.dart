@@ -128,15 +128,9 @@ class NoteAppCubit extends Cubit<NoteAppStates> {
     });
   }
 
-  void deleteDatabase({
-    required int id,
-  }) {
-    database!.rawDelete(
-      'DELETE tasks WHERE id = ?',
-      [id],
-    ).then((value) {
+  void deleteData({required String id}) async {
+    database!.rawDelete('DELETE FROM tasks WHERE id = ? ', [id]).then((value) {
       getDataFromDatabase(database);
-
       emit(NoteAppDeleteDataFromDatabaseStates());
     });
   }

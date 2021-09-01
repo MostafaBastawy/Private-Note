@@ -31,7 +31,7 @@ Widget defaultFormField({
 Widget buildTaskItem(Map model, context) => Dismissible(
       key: Key(model['id'].toString()),
       onDismissed: (direction) {
-        NoteAppCubit.get(context).deleteDatabase(id: model['id']);
+        NoteAppCubit.get(context).deleteData(id: model['id'].toString());
       },
       child: Padding(
         padding: const EdgeInsets.all(20.0),
