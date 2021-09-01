@@ -34,7 +34,9 @@ class NoteLayoutScreen extends StatelessWidget {
           body: ConditionalBuilder(
             condition: state is! NoteAppGetDataFromDatabaseLoadingStates,
             builder: (context) => cubit.screens[cubit.currentIndex],
-            fallback: (context) => Center(child: CircularProgressIndicator()),
+            fallback: (context) => Center(
+              child: CircularProgressIndicator(),
+            ),
           ),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
@@ -77,7 +79,6 @@ class NoteLayoutScreen extends StatelessWidget {
                       time: timeController.text,
                     )
                         .then((value) {
-                      Navigator.pop(context);
                       cubit.isBottomSheetShown = false;
                     });
                   }
