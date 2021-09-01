@@ -6,11 +6,20 @@ import 'package:privatenote/cubit/cubit.dart';
 import 'package:privatenote/cubit/states.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 
-class NoteLayoutScreen extends StatelessWidget {
+class NoteLayoutScreen extends StatefulWidget {
+  @override
+  _NoteLayoutScreenState createState() => _NoteLayoutScreenState();
+}
+
+class _NoteLayoutScreenState extends State<NoteLayoutScreen> {
   var scaffoldKey = GlobalKey<ScaffoldState>();
+
   var formKey = GlobalKey<FormState>();
+
   var titleController = TextEditingController();
+
   var timeController = TextEditingController();
+
   var dateController = TextEditingController();
 
   @override
@@ -80,6 +89,9 @@ class NoteLayoutScreen extends StatelessWidget {
                     )
                         .then((value) {
                       cubit.isBottomSheetShown = false;
+                      setState(() {
+                        cubit.fabIcon = Icons.edit;
+                      });
                     });
                   }
                 } else {
@@ -166,8 +178,14 @@ class NoteLayoutScreen extends StatelessWidget {
                       .closed
                       .then((value) {
                         cubit.isBottomSheetShown = false;
+                        setState(() {
+                          cubit.fabIcon = Icons.edit;
+                        });
                       });
                   cubit.isBottomSheetShown = true;
+                  setState(() {
+                    cubit.fabIcon = Icons.add;
+                  });
                 }
               }),
         );
