@@ -15,6 +15,10 @@ This is a notes application. I made it to learn the all basics of the SQL-lite d
     - sqflite
     - conditional_builder_null_safety
     
+## Video
+
+https://user-images.githubusercontent.com/81096412/139445068-27529638-0add-489d-a25c-bae61087e247.mp4
+
 ## Screenshots
 
 <table>
