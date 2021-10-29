@@ -1,16 +1,33 @@
-# privatenote
+# noon_clone
 
-A new Flutter project.
+This is a notes application. I made it to learn the all basics of the SQL-lite database and State Management (Bloc).It is very simple and easy to use. The main idea of the application is to store the user notes as tasks to help him managing his time. Also he sets a deadline to end this task and the application shows him if the task had done or not.
 
-## Getting Started
+## Tools
 
-This project is a starting point for a Flutter application.
+- Backend: SQL-lite Database
+- State management:
+    - Bloc Design Pattern
 
-A few resources to get you started if this is your first Flutter project:
+- Packages:
+    - bloc
+    - flutter_bloc
+    - intl
+    - sqflite
+    - conditional_builder_null_safety
+    
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<table>
+  <tr>
+    <td><img src="lib/screen_shots/privatenote1.jpg" width=270 height=480></td>
+    <td><img src="lib/screen_shots/privatenote2.jpg" width=270 height=480></td>
+    <td><img src="lib/screen_shots/privatenote3.jpg" width=270 height=480></td>
+  </tr>
+ </table>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<table>
+  <tr>
+    <td><img src="lib/screen_shots/privatenote4.jpg" width=270 height=480></td>
+  </tr>
+ </table>
+
